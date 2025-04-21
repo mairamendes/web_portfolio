@@ -1,0 +1,581 @@
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos globais */
+
+a {
+    text-decoration: none;
+    color: black;
+    transition: 0.1s;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #ffffff;
+    font-family: 'DM Sans', sans-serif;
+    background: radial-gradient(circle at 20% 30%, rgba(121, 106, 158, 0.116) 0%, transparent 50%), radial-gradient(circle at 80% 70%, rgba(124, 141, 78, 0.212) 0%, transparent 50%), #fff;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
+
+.underline-animate {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.underline-animate::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, #796A9E 37%, #9CA674 89%);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.underline-animate:hover::after {
+    transform: scaleX(1);
+}
+
+/* Header */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 999;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 55px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.062);
+}
+
+header nav h2 {
+    font-size: 30px;
+    font-weight: 600;
+    background: linear-gradient(to right, #796A9E 37%, #9CA674 89%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    font-size: 20px;
+}
+
+
+.social-icons i {
+    font-size: 35px;
+    transition: color 0.3s ease;
+}
+
+.social-icons i:hover {
+    background: linear-gradient(to right, #796A9E 37%, #9CA674 89%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: scale(1.05);
+    transition: transform 0.2s;
+
+}
+
+/* Seção “about” */
+section.about {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    padding: 250px 100px;
+}
+
+.about2,
+.avatar {
+    flex: 1 1 45%;
+    min-width: 300px;
+}
+
+.about2 ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+}
+
+.about2 h1 {
+    font-size: 60px;
+    font-weight: 500;
+}
+
+.about2 h2 {
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.gradient-text {
+    background: linear-gradient(to right, #796A9E 37%, #9CA674 89%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.about2 p {
+    font-size: 23px;
+    text-align: justify;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+}
+
+.about2 .button-curriculo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    padding: 15px 20px;
+    background: linear-gradient(to right, #796A9E 37%, #9CA674 89%);
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.about2 .button-curriculo i {
+    margin-right: 0.5rem;
+}
+
+.about2 .button-curriculo:hover {
+    transform: scale(1.05);
+}
+
+
+.avatar {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding: 1rem;
+}
+
+.avatar img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 50%;
+}
+
+/* Seção “skills” */
+
+.skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    scroll-margin-top: 85px;
+
+}
+
+.skills h1 {
+    font-size: 40px;
+    font-weight: 100;
+
+}
+
+.cards {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    padding: 100px 50px;
+
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+    border-radius: 20px;
+}
+
+.card:hover {
+    box-shadow: 0 0 20px #9CA674;
+    transform: translateY(-5px);
+    transition: transform 0.5s;
+}
+
+.card:hover .gradient-text-hover {
+    background: linear-gradient(to right, #544870 37%, #727a51 89%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+}
+
+.card:hover i {
+    background: linear-gradient(to right, #544870 37%, #727a51 89%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: scale(1);
+}
+
+
+.card i {
+    font-size: 50px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.card h2 {
+    font-size: 28px;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+
+.card p {
+    font-size: 23px;
+    text-align: center;
+}
+
+.icons-skills ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.icons-skills li img {
+    transition: transform 0.3s ease;
+}
+
+.icons-skills li img:hover {
+    transform: scale(1.1);
+}
+
+/*Projetos*/
+
+.projects {
+    padding-top: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.projects h1 {
+    font-size: 40px;
+    font-weight: 100;
+}
+
+.carousel {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    padding: 100px 50px;
+    flex-wrap: wrap;
+}
+
+.card-carousel {
+    display: flex;
+    width: 450px;
+    background-color: #ffffff;
+    flex-direction: column;
+    border-radius: 20px;
+    overflow: hidden;
+    gap: 15px;
+    box-shadow: 0 4px 6px -2px rgba(70, 70, 70, 0.5);
+}
+
+.card-carousel:hover {
+    transform: translateY(-5px);
+    transition: transform 0.2s;
+}
+
+
+.card-carousel img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    object-fit: cover;
+}
+
+.card-carousel h3 {
+    padding: 0 10px;
+    font-size: 20px;
+}
+
+.card-carousel p {
+    padding: 0 10px;
+    font-size: 18px;
+    color: dimgray;
+}
+
+.button-repo {
+    background-color: rgb(231, 230, 230);
+    padding: 10px;
+    width: 150px;
+    /* fixo */
+    border-radius: 20px;
+    display: flex;
+    gap: 0.5rem;
+    font-size: 17px;
+    margin: 10px 10px;
+    margin-top: auto;
+    transition: all 0.2s ease;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-repo:hover {
+    background: linear-gradient(to right, #796A9E 37%, #9CA674 89%);
+    color: #ffffff;
+    font-weight: bolder;
+}
+
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 500px;
+    align-items: baseline;
+    color: darkgray;
+}
+
+footer a {
+    color: darkgray;
+}
+
+footer i:hover {
+    color: #796A9E;
+    transition: 0.5s;
+}
+
+#buttonTopo {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #796A9E;
+    color: white;
+    cursor: pointer;
+    width: 45px;
+    /* largura fixa */
+    height: 45px;
+    /* altura igual à largura */
+    border-radius: 50%;
+    /* deixa redondinho */
+    font-size: 22px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: opacity 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#buttonTopo:hover {
+    background-color: #7c8d4e;
+}
+
+
+::-webkit-scrollbar {
+    width: 13px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #796A9E;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #7c8d4e;
+}
+
+/* Responsivo para telas menores */
+@media (max-width: 1024px) {
+    header nav {
+        padding: 20px 30px;
+        flex-wrap: wrap;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .about2 h1 {
+        font-size: 50px;
+    }
+
+    .about2 h2 {
+        font-size: 32px;
+    }
+
+    .about2 p {
+        font-size: 20px;
+    }
+
+    .skills h1,
+    .projects h1,
+    .contact h1 {
+        font-size: 36px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    header nav {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 20px;
+    }
+
+    header nav ul {
+        display: none;
+    }
+
+    header h2 {
+        font-size: 20px;
+    }
+
+    .social-icons ul {
+        display: flex;
+        gap: 10px;
+    }
+
+    .social-icons i {
+        font-size: 20px;
+    }
+
+    section.about {
+        flex-direction: column;
+        padding: 200px 30px 100px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .about2,
+    .avatar {
+        flex: 1 1 100%;
+    }
+
+    .about2 h1 {
+        font-size: 40px;
+    }
+
+    .about2 h2 {
+        font-size: 28px;
+    }
+
+    .about2 p {
+        font-size: 18px;
+        padding: 0 1rem;
+    }
+
+    .cards,
+    .carousel {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        padding: 50px 20px;
+    }
+
+    .card,
+    .card-carousel {
+        width: 100%;
+        max-width: 90%;
+    }
+
+    .contact input,
+    .contact textarea,
+    .contact button {
+        width: 90%;
+    }
+
+    .skills .cards {
+        justify-content: center;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+        padding: 20px 30px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .about2 h1 {
+        font-size: 32px;
+    }
+
+    .about2 h2 {
+        font-size: 24px;
+    }
+
+    .about2 p {
+        font-size: 16px;
+    }
+
+    .skills h1,
+    .projects h1,
+    .contact h1 {
+        font-size: 28px;
+    }
+
+    .card h2,
+    .card-carousel h2 {
+        font-size: 20px;
+    }
+
+    .card p,
+    .card-carousel p {
+        font-size: 16px;
+    }
+
+    .contact p {
+        font-size: 16px;
+    }
+
+    .contact input,
+    .contact textarea,
+    .contact button {
+        width: 100%;
+    }
+
+    #buttonTopo {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+
+    .skills .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+}
